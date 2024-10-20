@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #3498db;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 20px;
+            position: relative;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        #btn2 {
+            position: absolute;
+            top: 150px; /* Distancia do topo para evitar sobreposição */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Joice Juma Kellen Marruó, gostaria de lhe convidar para vir até a casa do Jumentino para ter um tempo de qualidade acompanhado de cumbuca babilônica estratosférica</h1>
+
+    <button id="btn1" class="button" onclick="alert('Você aceitou meu convite! 😍')">Sim, eu aceito</button>
+    <button id="btn2" class="button moveable">Não vou</button>
+
+    <script>
+        const button2 = document.getElementById('btn2');
+
+        button2.addEventListener('mouseover', function() {
+            const randomX = Math.random() * (window.innerWidth - button2.clientWidth);
+            const randomY = Math.random() * (window.innerHeight - button2.clientHeight);
+            button2.style.left = randomX + 'px';
+            button2.style.top = randomY + 'px';
+        });
+    </script>
+
+</body>
+</html>
